@@ -1,0 +1,50 @@
+{
+  "name": "sjb1688crm",
+  "version": "1.0.0",
+  "author": "杭州数据宝信息技术有限公司",
+  "description": "数据宝1688 CRM Client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "publish": "electron-builder --win -p always"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.1.4",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "com.sjb16888.crm.app",
+    "copyright": "杭州数据宝信息技术有限公司",
+    "productName": "数据宝1688 CRM",
+    "directories": {
+      "output": "dist"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://dev.sjb1688.update.com/crm_client/latest/win/"
+      }
+    ],
+    "files": [
+      "**/*",
+      "build/icon.ico"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "artifactName": "${productName}_setup_${version}.${ext}",
+      "target": [
+        "nsis"
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-debug": "^3.0.1",
+    "electron-is-dev": "^1.1.0",
+    "electron-log": "^3.0.7",
+    "electron-store": "^5.0.0",
+    "electron-updater": "^4.1.2"
+  }
+}
