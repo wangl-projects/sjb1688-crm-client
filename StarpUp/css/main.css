@@ -1,0 +1,63 @@
+body {
+    font-family: 'roboto', 'serif';
+    background: #3fa9f5;
+    color: white;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.cat {
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(./../img/logo.svg);
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.eyes {
+    position: absolute;
+    left: 120px;
+    top: 111px;
+    height: 0px;
+    widows: 25px;
+    background: white;
+    animation: blink 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    20%, 100% {
+        height: 0px;
+    }
+    0% {
+        height: 0px;
+    }
+    10% {
+        height: 27px;
+    }
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.message {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+}
