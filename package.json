@@ -1,6 +1,6 @@
 {
   "name": "sjb1688crm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "杭州数据宝信息技术有限公司",
   "description": "数据宝1688 CRM Client",
   "main": "main.js",
@@ -12,7 +12,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "electron": "^4.1.4",
+    "electron": "^4.2.12",
     "electron-builder": "^21.2.0"
   },
   "build": {
@@ -24,8 +24,9 @@
     },
     "publish": [
       {
-        "provider": "generic",
-        "url": "http://dev.sjb1688.update.com/crm_client/latest/win/"
+        "provider": "github",
+        "owner": "wangl-projects",
+        "repo": "sjb1688-crm-client"
       }
     ],
     "files": [
